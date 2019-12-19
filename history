@@ -1,0 +1,18 @@
+
+#!/bin/bash
+IFS=''
+for var in /home/maks/*
+do
+echo "$var "
+for folder in $var
+do
+if [ -f "$folder" ]
+then
+echo "Is a file"
+elif [ -d "$folder" ]
+then
+echo "Is a directory"
+fi 
+done 
+done
+
